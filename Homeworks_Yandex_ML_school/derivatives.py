@@ -32,7 +32,6 @@ class LossAndDerivatives:
         Comment: If Y is two-dimentional, average the error over both dimentions.
         """
 
-        # YOUR CODE HERE
         return np.mean(np.abs(X.dot(w) - Y))
 
     @staticmethod
@@ -46,7 +45,6 @@ class LossAndDerivatives:
         Computes the L2 regularization term for the weight matrix w.
         """
 
-        # YOUR CODE HERE
         return np.sum(w ** 2)
 
     @staticmethod
@@ -60,7 +58,6 @@ class LossAndDerivatives:
         Computes the L1 regularization term for the weight matrix w.
         """
 
-        # YOUR CODE HERE
         return np.sum(np.abs(w))
 
     @staticmethod
@@ -86,7 +83,6 @@ class LossAndDerivatives:
         dimension as well, so you need to consider that fact in derivative implementation.
         """
 
-        # YOUR CODE HERE
         result = 2. * X.T.dot(X.dot(w) - Y)
         for dim in Y.shape:
           result /= dim
@@ -108,7 +104,6 @@ class LossAndDerivatives:
         dimension as well, so you need to consider that fact in derivative implementation.
         """
 
-        # YOUR CODE HERE
         result = X.T.dot(np.sign(X.dot(w) - Y))
         for dim in Y.shape:
           result /= dim
@@ -124,7 +119,6 @@ class LossAndDerivatives:
         Computes the L2 regularization term derivative w.r.t. the weight matrix w.
         """
 
-        # YOUR CODE HERE
         return 2. * w
 
     @staticmethod
@@ -138,7 +132,6 @@ class LossAndDerivatives:
         Computes the L1 regularization term derivative w.r.t. the weight matrix w.
         """
 
-        # YOUR CODE HERE
         return np.sign(w)
 
     @staticmethod
